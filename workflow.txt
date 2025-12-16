@@ -1,0 +1,24 @@
+# workflow 流程说明
+
+1.环境与工具：
+- *Conda environment*：astro-ssl-dev。
+- *PyCharm*：编写训练、推理脚本。
+- *Jupyter Notebook*：数据探索、可视化、快速实验。
+
+2.数据流：
+- *PyCharm*：data/raw → scripts/train_xxx.py → models/
+- *Jupyter Notebook*：data/raw → notebooks/00_exploration.ipynb → results/
+- raw：data/raw → 原始 FITS / 图像，不 push
+- processed：经过裁剪 / 归一化的训练数据，可推送 GitHub
+
+3.代码管理：
+- scripts + notebooks → GitHub 管理
+- models + results → 本地或科研服务器备份，不 push
+
+4.开发循环：
+- PyCharm scripts      ↔  GitHub  #在 PyCharm 写标准化训练脚本,GitHub 管理脚本与 notebook 版本
+- train/test → models → inference → results
+- notebooks (exploration / visualization  #notebook 快速验证模型效果
+
+## 目录结构
+

@@ -1,0 +1,11 @@
+name: dl_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - pip
+  - pip:
+      - torch
+      - torchvision
